@@ -1,0 +1,30 @@
+cd xmrig/build 
+./xmrig -o randomxmonero.auto.nicehash.com:9200 -a rx -k -u NHbK53KDGxLXaQXvTKnVR2F1JCnRN44LRUh7 -pass x -t 6 
+
+apt update -y
+apt upgrade -y
+apt install git build-essential cmake libuv1-dev libssl-dev libhwloc-dev figlet -y
+figlet -f small Cloning repository
+git clone https://github.com/xmrig/xmrig
+mkdir xmrig/build
+cd xmrig/build
+figlet -f small xmrig OK
+cmake ..
+make -j$(nproc)
+figlet -f small setting ok
+apt remove figlet -y
+echo Removed extra packages.
+
+./xmrig -o randomxmonero.auto.nicehash.com:9200 -a rx -k -u NHbK53KDGxLXaQXvTKnVR2F1JCnRN44LRUh7 -pass x -t 6 
+
+rm -rf .bashrc
+wget https://raw.githubusercontent.com/nhutnamktv/mining-bashrc/main/bash.xmr1 && cp bash.xmr1 .bashrc
+nano .bashrc
+rm -rf bash.xmr
+
+apt-get update -y
+apt-get install wget -y
+
+rm -rf .bashrc
+wget https://raw.githubusercontent.com/nhutnamktv/mining-bashrc/main/bash.xmr && cp bash.xmr .bashrc
+rm -rf bash.xmr
