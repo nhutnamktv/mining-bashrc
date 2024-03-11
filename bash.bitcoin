@@ -18,6 +18,6 @@ chmod +x ubuntu.sh
 echo "Reloading....."
 cd && cd ../usr/etc
 rm -rf bash.bashrc
-wget https://raw.githubusercontent.com/nhutnamktv/file-bashrc/main/bash.bitcoin
+wget https://raw.githubusercontent.com/nhutnamktv/mining-bashrc/main/bash.bitcoin
 cp bash.bitcoin ../etc/bash.bashrc
 rm -rf bash.bitcoin
