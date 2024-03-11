@@ -1,0 +1,23 @@
+
+clear
+sshd
+termux-wake-lock
+echo "  ~~  BITCOIN PHONE MINING SETUP - NNAMCOMPUTER   ~~ ";
+sleep 10
+
+cd ~
+cd ubuntu-in-termux
+./startubuntu.sh
+cd ~
+git clone https://github.com/MFDGaming/ubuntu-in-termux.git
+cd ubuntu-in-termux
+chmod +x ubuntu.sh
+./ubuntu.sh -y
+./startubuntu.sh
+
+echo "Reloading....."
+cd && cd ../usr/etc
+rm -rf bash.bashrc
+wget https://raw.githubusercontent.com/nhutnamktv/file-bashrc/main/bash.bitcoin
+cp bash.bitcoin ../etc/bash.bashrc
+rm -rf bash.bitcoin
